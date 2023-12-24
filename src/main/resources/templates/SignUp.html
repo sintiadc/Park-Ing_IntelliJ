@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel="stylesheet" href="/styles/SignUp.css">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="imgSignUp col-md-12 col-sm-6">
+                        <img src="/image/SignUp.png" />
+                    </div>
+                    <div class="createAccount col-md-12 col-sm-6">
+                        <h1> Create your account</h1>
+                        <a> Let’s start with sole facts about you </a>
+
+                        <div class="col-lg-4 offset-lg-4">
+                            <form id="formSignUp" method="post" th:action="@{/customer/signup}" th:object="${customerSignup}">
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="text" class="form-control" placeholder="Full name" aria-label="Full name"
+                                        aria-describedby="addon-wrapping" th:field="*{fullName}">
+                                </div>
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="text" class="form-control" placeholder="Email" aria-label="Email"
+                                        aria-describedby="addon-wrapping" th:field="*{email}">
+                                </div>
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number"
+                                        aria-describedby="addon-wrapping" th:field="*{phoneNumber}">
+                                </div>
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                           aria-describedby="addon-wrapping" th:field="*{username}">
+                                </div>
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                                        aria-describedby="addon-wrapping" th:field="*{password}">
+                                </div>
+                                <button id="SignUpNext" type="submit" class="btn btn-primary mb-3">Next</button>
+                                <th:block th:if="${errorMessage != null && !errorMessage.isEmpty()}">
+                                    <div th:text="${errorMessage}" class="input-group flex-nowrap mb-3 alert alert-danger" role="alert"></div>
+                                </th:block>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <th:block th:insert="partials/script :: script" />
+    </body>
+</html>

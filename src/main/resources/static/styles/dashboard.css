@@ -1,0 +1,44 @@
+*{
+    background-color: #f5faff;
+}
+.nav-item{
+    margin-left: 100px;
+}
+
+.nav-link > img{
+    height: 80px;
+}
+/*DASHBOARD*/
+
+.judulDashbord{
+    margin-left: 90px;
+    font-size: 45px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5faff;
+    
+    position: absolute;
+    
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+
+.card-body >img {
+    width: 50px;
+    height: auto;
+    margin-top: -35%;
+    margin-left: 90%;
+}
+
+.booking{
+    margin-top: 16px;
+}
+
+.buttonW{
+    background-color: #dbeeff;
+    
+}

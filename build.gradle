@@ -1,0 +1,67 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.5'
+	id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'com.github'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// jpa + postgres
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.postgresql:postgresql'
+
+	// security for password
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.security:spring-security-test'
+	implementation 'org.springframework.security:spring-security-config'
+
+	// view
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // barcode
+	implementation 'net.sourceforge.barbecue:barbecue:1.5-beta1'
+
+	// lombok
+	compileOnly 'org.projectlombok:lombok:1.18.30'
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+	testCompileOnly 'org.projectlombok:lombok:1.18.30'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+tasks.named('bootBuildImage') {
+	builder = 'paketobuildpacks/builder-jammy-base:latest'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+dependencyLocking {
+	lockAllConfigurations()
+}
+
+tasks.register('resolveAndLockAll') {
+	notCompatibleWithConfigurationCache("Filters configurations at execution time")
+	doFirst {
+		assert gradle.startParameter.writeDependencyLocks : "$path must be run from the command line with the `--write-locks` flag"
+	}
+	doLast {
+		configurations.findAll {
+			// Add any custom filtering on the configurations to be resolved
+			it.canBeResolved
+		}.each { it.resolve() }
+	}
+}

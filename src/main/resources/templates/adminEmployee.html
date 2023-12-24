@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel="stylesheet" href="styles/adminEmploye.css">
+    </head>
+    <body>
+    <th:block th:insert="partials/navAdmin :: navAdmin" />
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1><strong>Employe</strong></h1>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        <img id="poto-profil" src="image/iconPeople2.png" alt="icon-people2" width="auto" height="50" style="background-color: white;"/> Employe 1 - Employe id
+                                    </button>
+                                </h2>
+
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="editDriver1">Name:</label>
+                                                    <!-- Ganti input dengan elemen span -->
+                                                    <span id="editDriver1" class="form-control">Admin Name</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="editVehicle1">Email:</label>
+                                                    <!-- Ganti input dengan elemen span -->
+                                                    <span id="editVehicle1" class="form-control">Email</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="editColor1">Phone Number:</label>
+                                                    <!-- Ganti input dengan elemen span -->
+                                                    <span id="editColor1" class="form-control">Phone number</span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="editPlatNumber1">Gender:</label>
+                                                    <!-- Ganti input dengan elemen span -->
+                                                    <span id="editPlatNumber1" class="form-control">Gender</span>
+                                                </div> <br>
+                                                <a id="editVehicle" href="#" class="btn btn-primary">Hapus</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                <img id="poto-profil" src="image/iconPeople2.png" alt="icon-people2" width="auto" height="50" style="background-color: white;"/> Employe 2 - Employe id
+                                            </button>
+                                        </h2>
+
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#flush-collapseTwo">
+                                            <div class="accordion-body">
+                                                <div class="container">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="editDriver1">Name:</label>
+                                                            <!-- Ganti input dengan elemen span -->
+                                                            <span id="editDriver1" class="form-control">Admin Name</span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editVehicle1">Email:</label>
+                                                            <!-- Ganti input dengan elemen span -->
+                                                            <span id="editVehicle1" class="form-control">Email</span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editColor1">Phone Number:</label>
+                                                            <!-- Ganti input dengan elemen span -->
+                                                            <span id="editColor1" class="form-control">Phone number</span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="editPlatNumber1">Gender:</label>
+                                                            <!-- Ganti input dengan elemen span -->
+                                                            <span id="editPlatNumber1" class="form-control">Gender</span>
+                                                        </div> <br>
+                                                        <a id="editVehicle" href="#" class="btn btn-primary">Hapus</a>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+
+
+    </body>
+
+</html>

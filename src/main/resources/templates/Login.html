@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel="stylesheet" href="/styles/Login.css">
+    </head>
+    <body>
+        <main>
+            <div class="col-lg-6" style="padding: 0;">
+                <img id="buletan" src="/image/bolaprofil.png" style="max-width: 100%; height: 100%; ">
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <!-- Isi di sini untuk bagian kanan halaman -->
+                <div style="max-width: 400px; width: 100%;">
+                    <h1>Login to your account</h1>
+                    <form method="post" th:action="@{/customer/login}" th:object="${accountLogin}">
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping"> <img src="/image/email.png"/> </span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="addon-wrapping" th:field="*{username}">
+                        </div>
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping"> <img src="/image/padlock.png"/> </span>
+                            <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                                aria-describedby="addon-wrapping" th:field="*{password}">
+                        </div>
+                        <button id="Login-login" type="submit" class="btn btn-primary mb-3">Log in</button>
+                        <th:block th:if="${errorMessage != null && !errorMessage.isEmpty()}">
+                            <div th:text="${errorMessage}" class="input-group flex-nowrap mb-3 alert alert-danger" role="alert"></div>
+                        </th:block>
+                        <th:block th:if="${successMessage != null && !successMessage.isEmpty()}">
+                            <div th:text="${successMessage}" class="input-group flex-nowrap mb-3 alert alert-success" role="alert"></div>
+                        </th:block>
+                    </form>
+                    <!-- <p style="text-align: right;"><a href="#">Forgot password?</a></p> -->
+                    <p style="text-align: center;">Don't have an account? <a href="/customer/signup">Sign up</a></p>
+                </div>
+            </div>
+        </main>
+
+        <th:block th:insert="partials/script :: script" />
+    </body>
+</html>

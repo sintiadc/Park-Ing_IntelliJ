@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" th:fragment="nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/customer/dashboard">
+        <img src="/image/logo.png" alt="logo" width = auto height="65"/>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a id="home-nav" class ="nav-link active" aria-current="page" href="/customer/dashboard"><img src="/image/home.png"/></a>
+          </li>
+          <li class="nav-item">
+            <a id="Booking" class="nav-link" href="/booking/latest"><img src="/image/e-tiket.png"/></a>
+          </li>
+          <li class="nav-item">
+            <a id="History" class="nav-link" href="/booking/history"><img src="/image/history.png"/></a>
+          </li>
+        </ul>
+      </div>
+      <div class="user" href="#" id="profilUser">
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle no-arrow" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a><strong>Hi, [[${customer.username}]]!</strong></a>
+                        <img id="poto-profil" src="/image/potoProfil.png" alt="poto-profil" width="auto" height="50"/>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a id="home-nav" class="dropdown-item" href="/customer/dashboard"><img src="/image/dashboard.png"/> Dashboard</a></li>
+                        <li><a id="Profil" class="dropdown-item" href="/customer/profile"><img src="/image/profile.png"/> Profil</a></li>
+                        <li><a id="logout" class="dropdown-item" href="#" onclick="showConfirmationDialog()"><img src="/image/logout.png"/> Log out</a></li>
+                    </ul>
+
+
+                </li>
+            </ul>
+        </div>
+      </div>
+
+        <div id="confirmationDialogBackground" class="confirmation-dialog-background"></div>
+        <div id="confirmationDialog" class="confirmation-dialog" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; padding: 5px; width:500px ;">
+            <div class="dialog-content" style="background-color: #78BCE3; padding: 20px;">
+                <img src="/image/bgLogOut.png" alt="Image" id="confirmationImage" style="width:50% ;height:50% ; background-color: #78BCE3;"/> <!-- Ganti dengan path gambar yang sesuai -->
+                <p id="out" style="background-color: #78BCE3; font-weight:bold; font-size:30px ;margin-top: -5%;">Log Out</p>
+                <p id="confirmationMessage" style="background-color: #78BCE3; margin-top: -5%;">Are you sure you want to log Out?</p>
+
+                <button class="btn btn-primary" onclick="logout()" >Logout</button>
+                <button class="btn btn-primary" onclick="hideConfirmationDialog()" style="margin-left: 20%;">Cancel</button>
+            </div>
+        </div>
+        <script>
+            function showConfirmationDialog() {
+                var dialogBackground = document.getElementById("confirmationDialogBackground");
+                var dialog = document.getElementById("confirmationDialog");
+                dialogBackground.style.display = "block";
+                dialog.style.display = "block";
+            }
+
+            function hideConfirmationDialog() {
+                var dialogBackground = document.getElementById("confirmationDialogBackground");
+                var dialog = document.getElementById("confirmationDialog");
+                dialogBackground.style.display = "none";
+                dialog.style.display = "none";
+            }
+
+            function logout() {
+                window.location.href = "/customer/logout";
+            }
+        </script>
+    </div>
+</nav>
+
+

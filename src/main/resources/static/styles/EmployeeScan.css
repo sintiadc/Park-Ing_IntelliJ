@@ -1,0 +1,139 @@
+* {
+    background-color: #f5faff;
+}
+
+.no-arrow::after {
+    display: none !important;
+}
+
+#home-nav>img {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.nav-item {
+    margin-left: 100px;
+}
+
+.navbar-brand{
+    margin-left: 2%;
+}
+/*
+.nav-link > img{
+    height: 80px;
+}
+  */
+
+#Booking>img {
+    height: 80px;
+}
+
+#List>img {
+    height: 90px;
+    margin-top: -5%;
+}
+
+
+.boxScan>img {
+    margin-top: 5%;
+    width: auto;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.card-header {
+
+    background-color: #1b78ac;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    font-size:larger;
+}
+
+.card-footer{
+    background-color: #1b78ac;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.card-body >a {
+    margin: 15px;
+}
+
+.card-header >a{
+    margin: 15px;
+    background-color: #1b78ac;
+}
+
+.card-footer >a {
+    margin: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    text-align: center;
+    display: flex;
+}
+
+.form-control {
+    /* Gaya untuk form input */
+    width: 25%; /* Sesuaikan lebar form input */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    /* Properti lain yang diperlukan */
+
+}
+.col >h1{
+    margin-bottom: 2%;
+}
+
+#capture >*{
+    background-color: #1b78ac;
+}
+
+#capture{
+    background-color: #1b78ac;
+}
+
+.dropdown-menu >*{
+    background-color: white;
+}
+
+.dialog-content{
+    text-align:center ;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-dialog-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
+  z-index: 9998; /* Z-index sebelum dialog konfirmasi */
+  display: none; /* Sembunyikan awalnya */
+}
+
+.confirmation-dialog {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Z-index dialog konfirmasi */
+  background-color: #78BCE3;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow:20% ;
+}

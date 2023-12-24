@@ -1,0 +1,51 @@
+.comtainer{
+    position: relative;
+}
+
+.imgSignUp > img{
+    margin-top: -12%;
+    margin-left: -10%;
+}
+
+.createAccount{
+    margin-top: -15%;
+    text-align: center;
+}
+.createAccount > h1 {
+    color: #649BEF;
+}
+
+.createAccount > a {
+    color: grey;
+}
+
+#formSignUp {
+    margin: 15%;
+}
+
+button {
+    cursor: pointer;
+    background-color: #0860E2;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,54 @@
+* {
+    background-color: #f5faff;
+}
+
+
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px; /* Atur ukuran font sesuai keinginan */
+    color: black; /* Atur warna font sesuai keinginan */
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+button {
+    cursor: pointer;
+    background-color: #0860E2;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

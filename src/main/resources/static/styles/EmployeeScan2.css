@@ -1,0 +1,159 @@
+* {
+    background-color: #f5faff;
+}
+
+.no-arrow::after {
+    display: none !important;
+}
+
+#home-nav>img {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.nav-item {
+    margin-left: 100px;
+}
+
+/*
+.nav-link > img{
+    height: 80px;
+}
+  */
+
+#Booking>img {
+    height: 80px;
+}
+
+#List>img {
+    height: 90px;
+    margin-top: -5%;
+}
+
+.card-header {
+
+    background-color: #1b78ac;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    font-size:larger;
+}
+
+.card-header >a{
+    background-color: #1b78ac;
+}
+
+.card-body h5:not(:has(strong)) {
+    color: #888; /* Ubah warna sesuai keinginan Anda */
+}
+
+.card-footer *{
+    background-color: white;
+}
+
+.card-footer{
+    background-color: white;
+}
+
+.card-body{
+    background-color: #DBEEFF;
+}
+
+.card-body *{
+    background-color: #DBEEFF;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.no-arrow::after {
+    display: none !important;
+}
+
+.nav-item{
+    margin-left: 100px;
+  }
+
+  .nav-link > img{
+    height: 80px;
+  }
+
+  #options {
+      top: 100%; /* Atur posisi di bawah elemen induk */
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 5px;
+      list-style: none;
+    }
+.dropdown-menu > *{
+  background-color: white;
+}
+
+.navbar-brand{
+    margin-left: 2%;
+}
+
+.row >h1{
+    margin-bottom: 2%;
+}
+
+.card-header >*{
+    margin-left: 2%;
+}
+
+.card-body >*{
+    margin-left: 5%;
+    margin-top: -2%;
+}
+
+.card-footer >*{
+    margin-left: 5%;
+}
+
+.baris-kosong {
+    height: 1.5em; /* Mengatur tinggi setara dengan satu baris */
+  }
+
+  #confirmPayment{
+    background-color: #1b78ac;
+    width: 200px;
+    margin-top: 3%;
+    font-weight: bold;
+  }
+
+  .dropdown-menu >*{
+    background-color: white;
+}
+
+.dialog-content{
+    text-align:center ;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-dialog-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
+  z-index: 9998; /* Z-index sebelum dialog konfirmasi */
+  display: none; /* Sembunyikan awalnya */
+}
+
+.confirmation-dialog {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Z-index dialog konfirmasi */
+  background-color: #78BCE3;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow:20% ;
+}

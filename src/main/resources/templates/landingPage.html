@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel ="stylesheet" href="/styles/landingPage.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/image/logo.png" alt="logo" width = auto height="65" style="margin-top:-5% ;"/>
+                </a>
+            </div>
+            <a class="SignUp" id="SignUp" href="/customer/signup">SignUp</a>
+            <a class="Login" id="Login" href="/customer/login">Login</a>
+        </nav>
+
+        <main>
+            <div class="logo_lp">
+                <img src="/image/lp.png" />
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="/image/lp-1.png" style="width: 250px; height: auto;"/>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="/image/lp-2.png" style="width: 250px; height: auto; margin-left: 20%"/>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="/image/lp-3.png" style="width: 250px; height: auto; margin-top: 3%; margin-left: 25%"/>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <th:block th:insert="partials/script :: script" />
+    </body>
+</html>

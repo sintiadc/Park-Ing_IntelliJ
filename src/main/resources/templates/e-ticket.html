@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel ="stylesheet" href="/styles/dashboard.css">
+        <link rel ="stylesheet" href="/styles/nav.css">
+        <link rel ="stylesheet" href="/styles/e-ticket.css">
+    </head>
+    <body>
+    <th:block th:insert="partials/nav :: nav" />
+        <main>
+            <div class="card-bg">
+                <div class="card text-center mb-3" style="width: 30rem;">
+                    <div class="card-body">
+                        <img src="/image/centang.png" />
+                        <ul>
+                            <a id="fontT1"><strong>E-Ticket</strong></a> <br>
+                            <!--<a id="fontT2">8234567002</a><br>-->
+                            <a id="fontT3"><strong>*Payment is made at the locket*</strong></a><br>
+                            <a id="fontT4"><strong>Vehicle Plate Number</strong></a><br>
+                            <a id="fontT5"><strong>[[${vehicle.policeNumber}]]</strong></a>
+                            <hr style="width: 150%; margin-left:-30%; ">
+                            <img id="barchode" th:src="|data:image/png;base64, ${barcode}|"/><br>
+                            <!--<img id="barchode" src="/image/barchode.png"/><br>-->
+                            <a id="fontT6"> Metro Indah Mall</a><br>
+                            <a id="fontT7">Jl.Majapahit Bandung</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <th:block th:insert="partials/script :: script" />
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel ="stylesheet" href="/styles/profilmenu.css">
+        <link rel ="stylesheet" href="/styles/nav.css">
+    </head>
+    <body>
+        <th:block th:insert="partials/nav :: nav" />
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <ul id="profilname">
+                            <img id="poto-profil" src="/image/potoProfil.png" alt="poto-profil" width="auto" height="50"/>
+                            <div>
+                                <a><strong>[[${customer.fullName}]]</strong></a>
+                                <br>
+                                <a>[[${customer.email}]]</a>
+                            </div>
+                        </ul>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item" th:each="vehicle: ${customer.vehicleList}">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" th:data-bs-target="|#flush-collapse-${vehicle.id.vehicleId}|" aria-expanded="false" th:aria-controls="|flush-collapse-${vehicle.id.vehicleId}|">
+                                        <img id="poto-profil" src="/image/wheel.png"/> [[${vehicle.brand}]] [[${vehicle.type}]] - [[${vehicle.policeNumber}]]
+                                    </button>
+                                </h2>
+                                <div th:id="|flush-collapse-${vehicle.id.vehicleId}|" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <div class="container">
+                                        <form>
+                                            <!--<div class="form-group">
+                                                <label for="editDriver1">Driver:</label>
+                                                <span id="editDriver1" class="form-control">Nama Driver</span>
+                                            </div>-->
+                                            <div class="form-group">
+                                                <label for="editVehicle1">Vehicle:</label>
+                                                <!-- Ganti input dengan elemen span -->
+                                                <span id="editVehicle1" class="form-control">[[${vehicle.brand}]] [[${vehicle.type}]]</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editColor1">Color:</label>
+                                                <!-- Ganti input dengan elemen span -->
+                                                <span id="editColor1" class="form-control">[[${vehicle.color}]]</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editPlatNumber1">Plat Number:</label>
+                                                <!-- Ganti input dengan elemen span -->
+                                                <span id="editPlatNumber1" class="form-control">[[${vehicle.policeNumber}]]</span>
+                                            </div> <br>
+                                            <a id="editVehicle" th:href="@{/vehicle/{id}/edit(id=${vehicle.id.vehicleId})}" class="btn btn-primary">Edit</a>
+                                        </form>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div style="display: block; padding: 8px"></div>
+                            <a id="addVehicle" class="btn btn-primary mb-3" href="/vehicle/add">Add Vehicle   +</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <th:block th:insert="partials/script :: script" />
+    </body>
+</html>

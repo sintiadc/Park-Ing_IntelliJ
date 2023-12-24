@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel="stylesheet" href="/styles/SignUp.css">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="imgSignUp col-md-12 col-sm-6">
+                        <img src="/image/SignUp.png" />
+                    </div>
+                    <div class="createAccount col-md-12 col-sm-6">
+                        <h1> Add your vehicle</h1>
+                        <a> Fill in with the vehicle you use most often </a>
+
+                        <div class="col-lg-4 offset-lg-4">
+                            <form id="formSignUp" method="post" th:action="@{/vehicle/init}" th:object="${vehicleAddition}">
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="text" class="form-control" placeholder="Vehicle Brand" aria-label="Vehicle Brand"
+                                        aria-describedby="addon-wrapping" th:field="*{brand}">
+                                </div>
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="text" class="form-control" placeholder="Vehicle Type" aria-label="Vehicle Type"
+                                           aria-describedby="addon-wrapping" th:field="*{type}">
+                                </div>
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="text" class="form-control" placeholder="Color" aria-label="Color"
+                                        aria-describedby="addon-wrapping" th:field="*{color}">
+                                </div>
+                                <div class="input-group flex-nowrap mb-3">
+                                    <input type="text" class="form-control" placeholder="Vehicle Plate Number" aria-label="Vehicle Plate Number"
+                                        aria-describedby="addon-wrapping" th:field="*{policeNumber}">
+                                </div>
+                                <button id="createAccount" type="submit" class="btn btn-primary mb-3">Add vehicle</button>
+                                <th:block th:if="${errorMessage != null && !errorMessage.isEmpty()}">
+                                    <div th:text="${errorMessage}" class="input-group flex-nowrap mb-3 alert alert-danger" role="alert"></div>
+                                </th:block>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <th:block th:insert="partials/script :: script" />
+    </body>
+</html>

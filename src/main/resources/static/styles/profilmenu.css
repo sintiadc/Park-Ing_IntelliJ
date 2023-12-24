@@ -1,0 +1,59 @@
+*{
+    background-color: #f5faff;
+}
+
+.nav-item{
+    margin-left: 100px;
+}
+.nav-link > img{
+    height: 80px;
+}
+
+#profilname {
+    display: flex;
+    align-items: center;
+}
+
+#poto-profil {
+    margin-right: 10px;
+}
+
+#profilname a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown{
+    margin-left: 20px;
+}
+
+.accordion-body {
+    position: relative;
+  }
+  
+  .white-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+    background-color: white;
+    z-index: -1; /* Untuk mengatur elemen ini di lapisan belakang */
+  }
+
+  .transaksiHistory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Sesuaikan tinggi elemen sesuai kebutuhan Anda */
+  }
+  
+  .transaksiHistory > img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+#addVehivle {
+  margin: 2%;
+  align-items: center;
+}

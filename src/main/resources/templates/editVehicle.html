@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel ="stylesheet" href="/styles/profilmenu.css">
+        <link rel ="stylesheet" href="/styles/nav.css">
+        <link rel ="stylesheet" href="/styles/editVehicle.css">
+    </head>
+    <body>
+        <th:block th:insert="partials/nav :: nav" />
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <ul id="profilname">
+                            <img id="poto-profil" src="/image/potoProfil.png" alt="poto-profil" width="auto" height="50"/>
+                            <div>
+                                <a><strong>[[${customer.fullName}]]</strong></a>
+                                <br>
+                                <a>[[${customer.email}]]</a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <img id="poto-profil" src="/image/wheel.png"/> edit Vehicle
+                                <div class="form container">
+                                    <form method="post" th:action="@{/vehicle/{id}/edit(id=${vehicleEdit.vehicleId})}" th:object="${vehicleEdit}">
+                                        <!--<div class="form-group">
+                                            <label for="editDriver1">Driver:</label>
+                                            <span id="editDriver1" class="form-control">Nama Driver</span>
+                                        </div>-->
+                                        <input type="hidden" th:field="*{prevPoliceNumber}" />
+                                        <div class="form-group">
+                                            <label for="editVehicle1">Vehicle:</label>
+                                            <!-- Ganti input dengan elemen span -->
+                                            <input id="editVehicle1" type="text" class="form-control" placeholder="Brand Kendaraan" th:field="*{brand}" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editVehicle1">Model:</label>
+                                            <!-- Ganti input dengan elemen span -->
+                                            <input id="editVehicle1" type="text" class="form-control" placeholder="Model Kendaraan" th:field="*{type}" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editColor1">Color:</label>
+                                            <!-- Ganti input dengan elemen span -->
+                                            <input id="editColor1" type="text" class="form-control" placeholder="Warna Kendaraan" th:field="*{color}" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editPlatNumber1">Plat Number:</label>
+                                            <!-- Ganti input dengan elemen span -->
+                                            <input id="editPlatNumber1" type="text" class="form-control" placeholder="Nomor Plat" th:field="*{policeNumber}" />
+                                        </div> <br>
+                                        <button id="addVehicle" type="submit" class="booking btn btn-primary">Save</button>
+                                        <div style="display: block; padding: 8px"></div>
+                                        <th:block th:if="${errorMessage != null && !errorMessage.isEmpty()}">
+                                            <div th:text="${errorMessage}" class="input-group flex-nowrap mb-3 alert alert-danger" role="alert"></div>
+                                        </th:block>
+                                        <th:block th:if="${successMessage != null && !successMessage.isEmpty()}">
+                                            <div th:text="${successMessage}" class="input-group flex-nowrap mb-3 alert alert-success" role="alert"></div>
+                                        </th:block>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <th:block th:insert="partials/script :: script" />
+    </body>
+</html>
