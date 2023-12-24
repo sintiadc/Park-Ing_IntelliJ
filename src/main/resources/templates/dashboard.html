@@ -38,20 +38,18 @@
                                   </th:block>
                               </select>
                           </div>
-                            <!--
+
                           <div class="d-flex gap-5">
-                            <div class="dropdown mt-4">
-                              <button class="buttonW btn btn-primary dropdown-toggle text-black" data-bs-toggle="dropdown" aria-expanded="false">
-                                Floor
-                              </button>
-                              <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Floor 1</a></li>
-                                <li><a class="dropdown-item" href="#">Floor 2</a></li>
-                                <li><a class="dropdown-item" href="#">Floor 3</a></li>
-                              </ul>
-                            </div>
+
+                              <select class="buttonW form-select form-select-lg mb-3" aria-label="vehicle" th:field="*{vehicleId}">
+                                  <option value="0" selected>Floor</option>
+                                  <option th:value="1">1</option>
+                                  <option th:value="2">2</option>
+                                  <option th:value="3">3</option>
+
+                              </select>
                           </div>
-                            -->
+
                         </div>
 
                         <button id="Book" type="submit" class="booking btn btn-primary">Booking</button>
