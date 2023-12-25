@@ -73,3 +73,9 @@
   border-radius: 20px;
   box-shadow:20% ;
 }
+
+
+.btn-custom {
+    height: 40px; /* Ubah angka sesuai dengan tinggi yang diinginkan */
+    background-color: #1b78ac;
+  }
