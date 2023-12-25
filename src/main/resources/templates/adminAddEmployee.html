@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:insert="partials/head :: head" />
+        <link rel="stylesheet" href="styles/adminAddEmploye.css">
+    </head>
+
+<body>
+    <th:block th:insert="partials/navAdmin :: navAdmin" />
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul id="profilname">
+                        <img id="poto-profil" src="image/potoProfil.png" alt="poto-profil" width="auto" height="50"/>
+                        <div>
+                            <a><strong>Username</strong></a> 
+                            <br>
+                            <a>username@gmail.com</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <img id="iconPeople" src="image/iconPeople2.png"/> Edit Employee 1  - Id Number
+                            <div class="form container">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="editDriver1">Driver:</label>
+                                        <!-- Ganti input dengan elemen span -->
+                                        <span id="editDriver1" class="form-control">Nama Driver</span>
+                                    </div>
+                                    
+                                    <a id="addEmployee" href="#" class="booking btn btn-primary">Save</a>
+                                </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                    
+        
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById("addVehicle").addEventListener("click", function () {
+            // Mengarahkan pengguna ke halaman selanjutnya
+            window.location.href = "http://localhost:3000/Profil";
+        });
+    </script>
+
+</body>
+</html>
